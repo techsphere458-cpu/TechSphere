@@ -57,7 +57,7 @@ export default function MainPageProducts() {
                     ) : (
                         (isUsedFilter ? filteredProducts : products).map((p) => (
                             <div key={p.id} className={"mainPageProductContainer"}>
-                                <img src={p.imageURL} onClick={() => navigate(`/product/${encodeURIComponent(p.title.trim())}`)}/>
+                                <img src={p.imageURL} loading={"lazy"} onClick={() => navigate(`/product/${encodeURIComponent(p.title.trim())}`)}/>
                                 <p>{p.title}</p>
                                 <Button onClick={() => navigate(`/product/${encodeURIComponent(p.title.trim())}`)}>Більше</Button>
                             </div>
@@ -74,6 +74,60 @@ function getMockDataForProducts(){
     return [
         { "id": 1, "title": "Блоки Живлення", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
         { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
-        { "id": 3, "title": "SSSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" }
+        { "id": 3, "title": "SSSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" },
+        { "id": 2, "title": "SSD", "imageURL": "https://content.rozetka.com.ua/goods/images/big/3975900.jpg" }
     ];
 }

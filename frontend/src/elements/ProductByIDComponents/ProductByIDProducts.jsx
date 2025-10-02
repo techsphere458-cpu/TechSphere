@@ -91,7 +91,7 @@ export default function ProductByIDProducts({type}) {
                     ) : (
                         (isUsedFilter ? filteredProductsByID : productsByID).map((p) => (
                             <div key={p.id} className={"mainPageProductByIDContainer"}>
-                                <img src={p.imageUrl} />
+                                <img src={p.imageUrl} loading={"lazy"}/>
                                 <p className={"mainPageProductByIDContainerType"}>{p.model}</p>
                                 <p className={"mainPageProductByIDPrize"}>{p.price}грн</p>
 

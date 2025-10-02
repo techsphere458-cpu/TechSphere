@@ -63,7 +63,7 @@ export default function AdminProducts() {
                     ) : (
                         (isUsedFilter ? filteredProducts : products).map((p) => (
                             <div key={p.id} className={"adminProductContainer"}>
-                                <img src={p.imageURL}
+                                <img src={p.imageURL}  loading={"lazy"}
                                      onClick={() => navigate(`/admin/redact/product/${p.id}`)}/>
                                 <p>{p.title}</p>
                                 <Button className={"adminProductButton"}
