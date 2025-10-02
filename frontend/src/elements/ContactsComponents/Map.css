@@ -5,6 +5,10 @@
 
 }
 
+.mapIconContainer{
+    background-color: transparent;
+}
+
 @media (max-width: 819px) {
     .mapContainer{
         width: 95%;
