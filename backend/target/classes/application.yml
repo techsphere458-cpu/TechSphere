@@ -1,3 +1,5 @@
+
+
 spring:
   application:
     name: backend
@@ -7,8 +9,8 @@ spring:
       client:
         registration:
           google:
-            client-id: 446853213781-0ni25ghs8kqp2ujur303copou64p96m6.apps.googleusercontent.com
-            client-secret: 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
+            client-id: ${GOOGLE_CLIENT_ID}
+            client-secret: ${GOOGLE_CLIENT_SECRET}
             scope:
               - profile
               - email
@@ -16,18 +18,23 @@ spring:
 
 
 database:
-    host: mysql-db
-    port: 3306
-    username: root
-    password: root
-    name: test
+    host: ${MYSQL_HOST}
+    port: ${MYSQL_PORT}
+    username: ${MYSQL_USER_NAME}
+    password: ${MYSQL_ROOT_PASSWORD}
+    name: ${MYSQL_DATABASE}
 
-server:
-  port: 8081
 
 mail:
     sendgrid:
-      api-key: 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
-      from: mykola.chichkalenko@gmail.com
+      api-key: ${SENDGRID_APIKEY}
+      from: ${SENDGRID_FROM}
 
 
+cloudinary:
+    cloud-name: ${CLOUDINARY_CLOUDNAME}
+    api-key: ${CLOUDINARY_APIKEY}
+    api-secret: ${CLOUDINARY_APISECRET}
+
+server:
+  port: 8081

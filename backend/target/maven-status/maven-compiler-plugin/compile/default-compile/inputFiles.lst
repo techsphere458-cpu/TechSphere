@@ -1,9 +1,11 @@
 C:\Users\Коля\Desktop\myProjects\TechSphere\backend\src\main\java\com\example\backend\BackendApplication.java
+C:\Users\Коля\Desktop\myProjects\TechSphere\backend\src\main\java\com\example\backend\Configs\CloudinaryConfig.java
 C:\Users\Коля\Desktop\myProjects\TechSphere\backend\src\main\java\com\example\backend\Configs\R2DBCConfig.java
 C:\Users\Коля\Desktop\myProjects\TechSphere\backend\src\main\java\com\example\backend\Configs\RouterConfig.java
 C:\Users\Коля\Desktop\myProjects\TechSphere\backend\src\main\java\com\example\backend\Configs\SecurityConfig.java
 C:\Users\Коля\Desktop\myProjects\TechSphere\backend\src\main\java\com\example\backend\Configs\TablesConfig.java
 C:\Users\Коля\Desktop\myProjects\TechSphere\backend\src\main\java\com\example\backend\Configs\WebFluxConfig.java
+C:\Users\Коля\Desktop\myProjects\TechSphere\backend\src\main\java\com\example\backend\Controllers\CloudinaryController.java
 C:\Users\Коля\Desktop\myProjects\TechSphere\backend\src\main\java\com\example\backend\Controllers\LoginController.java
 C:\Users\Коля\Desktop\myProjects\TechSphere\backend\src\main\java\com\example\backend\Controllers\OrderController.java
 C:\Users\Коля\Desktop\myProjects\TechSphere\backend\src\main\java\com\example\backend\Controllers\ProductItemsController.java
@@ -12,6 +14,7 @@ C:\Users\Коля\Desktop\myProjects\TechSphere\backend\src\main\java\com\exampl
 C:\Users\Коля\Desktop\myProjects\TechSphere\backend\src\main\java\com\example\backend\DTOs\ProductDTO.java
 C:\Users\Коля\Desktop\myProjects\TechSphere\backend\src\main\java\com\example\backend\DTOs\ProductItemDTO.java
 C:\Users\Коля\Desktop\myProjects\TechSphere\backend\src\main\java\com\example\backend\DTOs\UserInfoDTO.java
+C:\Users\Коля\Desktop\myProjects\TechSphere\backend\src\main\java\com\example\backend\Services\CloudinaryService.java
 C:\Users\Коля\Desktop\myProjects\TechSphere\backend\src\main\java\com\example\backend\Services\OrderService.java
 C:\Users\Коля\Desktop\myProjects\TechSphere\backend\src\main\java\com\example\backend\Services\ProductItemsService.java
 C:\Users\Коля\Desktop\myProjects\TechSphere\backend\src\main\java\com\example\backend\Services\ProductsService.java
