@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "../ContactsComponents/Map.css"
 
+
 export default function MyMap() {
     const position = [49.79944200070472, 30.116352621152526];
 

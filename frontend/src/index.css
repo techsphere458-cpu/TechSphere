@@ -52,3 +52,8 @@ body{
         display: none;
     }
 }
+
+.leaflet-container .leaflet-marker-icon,
+.leaflet-container .leaflet-marker-shadow {
+    background-image: url('../public/images');
+}
