@@ -6,9 +6,10 @@
 /out
 *.log
 
+
 # Node / React
-node_modules/
-dist/
+node_modules
+frontend/dist
 .cache/
 npm-debug.log
 yarn-debug.log
