@@ -1,0 +1,40 @@
+
+
+spring:
+  application:
+    name: backend
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${GOOGLE_CLIENT_ID}
+            client-secret: ${GOOGLE_CLIENT_SECRET}
+            scope:
+              - profile
+              - email
+
+
+
+database:
+    host: ${MYSQL_HOST}
+    port: ${MYSQL_PORT}
+    username: ${MYSQL_USER_NAME}
+    password: ${MYSQL_ROOT_PASSWORD}
+    name: ${MYSQL_DATABASE}
+
+
+mail:
+    sendgrid:
+      api-key: ${SENDGRID_APIKEY}
+      from: ${SENDGRID_FROM}
+
+
+cloudinary:
+    cloud-name: ${CLOUDINARY_CLOUDNAME}
+    api-key: ${CLOUDINARY_APIKEY}
+    api-secret: ${CLOUDINARY_APISECRET}
+
+server:
+  port: 8081

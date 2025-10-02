@@ -1,0 +1,115 @@
+.contactH1 {
+    font-size: 70px;
+    margin-top: 0;
+    color: gray;
+}
+
+.contactContainer {
+    position: relative;
+    left: 17%;
+    top: -9.5%;
+}
+.contactContainer p{
+    font-weight: bold;
+    font-size: 20px;
+}
+.contactContainer span {
+    font-weight: 500;
+}
+
+.contactSeparator{
+    position: absolute;
+    left: 15%;
+}
+
+.contactTitleSeparator{
+    width: 1200px;
+    position: relative;
+    bottom: 40px;
+}
+
+@media (max-width: 2500px) {
+    .contactTitleSeparator{
+        width: 1200px;
+    }
+}
+
+@media (max-width: 2050px) {
+    .contactTitleSeparator{
+        width: 1100px;
+    }
+}
+@media (max-width: 1870px) {
+    .contactTitleSeparator {
+        width: 1000px;
+    }
+}
+@media (max-width: 1720px) {
+    .contactTitleSeparator{
+        width: 900px;
+    }
+
+}
+@media (max-width: 1565px) {
+    .contactTitleSeparator{
+        width: 1000px;
+    }
+}
+@media (max-width: 1010px) {
+    .contactTitleSeparator{
+        width: 790px;
+        margin-top: -15px;
+    }
+
+}
+@media (max-width: 800px) {
+    .contactTitleSeparator{
+        margin-top: -20px;
+        width: 600px;
+    }
+}
+@media (max-width: 650px) {
+    .contactTitleSeparator{
+        width: 450px;
+    }
+}
+@media (max-width: 500px) {
+    .contactTitleSeparator{
+        width: 400px;
+    }
+}
+@media (max-width: 400px) {
+    .contactTitleSeparator {
+        width: 350px;
+    }
+}
+@media (max-width: 350px) {
+    .contactTitleSeparator{
+        width: 300px;
+    }
+}
+
+
+
+@media (max-width: 641px) {
+    .contactContainer{
+        left: 6%;
+        top: -4.5%;
+    }
+    .contactContainer p{
+        font-size: 15px;
+    }
+
+    .contactSeparator{
+        left: 4%;
+    }
+}
+
+@media (max-width: 340px) {
+    .contactH1{
+        font-size: 50px;
+    }
+    .contactTitleSeparator{
+        margin-top: 0px;
+    }
+}

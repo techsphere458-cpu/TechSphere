@@ -1,0 +1,45 @@
+.mapContainer {
+    margin-top: 10px;
+    height: 500px;
+    width: 80%;
+
+}
+
+@media (max-width: 819px) {
+    .mapContainer{
+        width: 95%;
+    }
+}
+
+
+@media (max-height: 899px) {
+    .mapContainer{
+        height: 450px;
+    }
+}
+
+@media (max-height: 851px) {
+    .mapContainer{
+        height: 400px;
+    }
+}
+@media (max-height: 800px) {
+    .mapContainer{
+        height: 350px;
+    }
+}
+@media (max-height: 750px) {
+    .mapContainer{
+        height: 300px;
+    }
+}
+@media (max-height: 700px) {
+    .mapContainer{
+        height: 250px;
+    }
+}
+@media (max-height: 650px) {
+    .mapContainer{
+        height: 200px;
+    }
+}

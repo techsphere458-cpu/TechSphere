@@ -1,0 +1,175 @@
+.adminProductContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: white;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    position: relative;
+}
+@media (max-width: 767px) {
+    .adminProductContainer {
+        width: 70%;
+        margin-left: 15%;
+    }
+}
+@media (max-width: 500px){
+    .adminProductContainer{
+        width: 90%;
+        margin-left: 3%;
+    }
+}
+
+.adminProductContainer:hover{
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: ease-in 0.2s;
+}
+
+.adminProductContainer img {
+    width: 100%;
+    max-width: 350px;
+    height: 220px;
+    object-fit: cover;
+}
+
+.adminProductContainer p {
+    font-size: 30px;
+    font-weight: 600;
+    color: #333;
+    margin: 12px 0 0 0;
+    text-align: center;
+}
+.adminProductButton{
+    margin-top: 10px;
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 600;
+
+    background-color: #387ded;
+    color: #f2eeee;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.adminProductSearchContainer{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    position: absolute;
+}
+
+
+.adminProductsNotFoundContainer{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.adminProductsNotFoundContainer p{
+    font-size: 30px;
+    color: #acacac;
+}
+
+.adminProductsChangeButton{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: none;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.adminProductContainer:hover .adminProductsChangeButton{
+    display: block;
+}
+
+.adminProductAddProductButton{
+    margin-right: 75%;
+    cursor: pointer;
+}
+
+@media (max-width: 2250px) {
+    .adminProductAddProductButton{
+        margin-right: 72%;
+    }
+}
+@media (max-width: 1900px) {
+    .adminProductAddProductButton{
+        margin-right: 67%;
+    }
+}
+@media (max-width: 1000px) {
+    .adminProductAddProductButton{
+        margin-right: 62%;
+    }
+}
+@media (max-width: 850px) {
+    .adminProductAddProductButton{
+        margin-right: 60%;
+    }
+}
+@media (max-width: 800px) {
+    .adminProductAddProductButton{
+        margin-right: 55%;
+    }
+}
+@media (max-width: 725px) {
+    .adminProductAddProductButton{
+        margin-right: 50%;
+    }
+}
+@media (max-width: 650px) {
+    .adminProductAddProductButton{
+        margin-right: 45%;
+    }
+}
+@media (max-width: 540px) {
+    .adminProductAddProductButton{
+        margin-right: 40%;
+    }
+}
+@media (max-width: 500px) {
+    .adminProductAddProductButton{
+        margin-right: 35%;
+    }
+}
+@media (max-width: 450px) {
+    .adminProductAddProductButton{
+        margin-right: 30%;
+    }
+}
+@media (max-width: 420px) {
+    .adminProductAddProductButton{
+        margin-right: 25%;
+    }
+}
+@media (max-width: 400px) {
+    .adminProductAddProductButton{
+        margin-right: 20%;
+    }
+}
+@media (max-width: 365px) {
+    .adminProductAddProductButton{
+        margin-right: 15%;
+    }
+}
+@media (max-width: 345px) {
+    .adminProductAddProductButton{
+        margin-right: 8%;
+    }
+}

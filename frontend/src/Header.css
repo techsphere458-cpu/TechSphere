@@ -1,0 +1,92 @@
+.headerBox{
+    position: sticky;
+    background: #111827;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.headerContainer {
+    position: sticky;
+    background: #111827;
+    width: 60%;
+    height: 80px;
+
+}
+
+
+
+.headerLogo {
+    height: 60px;
+    margin: 7px;
+}
+.headerLogo:hover{
+    cursor: pointer;
+}
+
+
+
+.headerNavBarBox {
+    height: 100%;
+    width: 50%;
+    position: relative;
+    display: flex;
+    justify-content: end;
+}
+
+.headerNavBarTabNav {
+    position: absolute;
+    right: 30px;
+    top: 10px;
+}
+.headerNavBarTabNav a{
+    color: white;
+    margin: 10px;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.headerNavBarMenuButton {
+    background: transparent;
+    margin-top: 25px;
+    margin-right: 20px;
+}
+
+
+
+@media(max-width: 1875px) {
+   .headerContainer{
+        width: 100%;
+   }
+    .headerLogo{
+        height: 45px;
+        margin: 16px;
+    }
+}
+
+@media (max-width: 819px) {
+    .headerNavBarTabNav{
+        display: none;
+    }
+    .headerNavBarMenuButton {
+        margin-right: 10px;
+        margin-top: 23px;
+    }
+}
+@media (max-width: 350px) {
+    .headerLogo{
+        height: 35px;
+        margin: 20px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .headerNavBarTabNav{
+        display: none;
+    }
+}
+@media (min-width: 1051px) {
+    .headerNavBarMenuButton{
+        display: none;
+    }
+}
+

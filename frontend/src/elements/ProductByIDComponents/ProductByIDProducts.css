@@ -1,0 +1,101 @@
+.mainPageProductByIDContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: white;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+    .mainPageProductByIDContainer {
+        width: 70%;
+        margin-left: 15%;
+    }
+}
+@media (max-width: 500px){
+    .mainPageProductByIDContainer{
+        width: 90%;
+        margin-left: 3%;
+    }
+}
+
+.mainPageProductByIDContainer:hover{
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: ease-in 0.2s;
+}
+
+.mainPageProductByIDContainer img {
+    width: 100%;
+    max-width: 350px;
+    height: 220px;
+    object-fit: cover;
+}
+
+.mainPageProductByIDContainerType{
+    font-size: 25px;
+    font-weight: 600;
+    color: #333;
+    margin: 12px 0 0 0;
+    text-align: center;
+}
+
+.mainPageProductByIDPrize{
+    font-size: 20px;
+    font-weight: 500;
+    color: #536b56;
+    margin: 8px 0 0 0;
+}
+
+.mainPageProductByIDButtonAndBadgeContainer{
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+}
+
+.mainPageProductByIDBadge{
+    position: absolute;
+    top: -150%;
+}
+
+.mainPageProductByIDContainer button {
+    margin-top: 10px;
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 600;
+
+    background-color: #FACC15;
+    color: #111111;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.mainPageProductByIDSearchContainer{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    position: absolute;
+}
+
+
+.mainPageProductByIDNotFoundContainer{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.mainPageProductByIDNotFoundContainer p{
+    font-size: 30px;
+    color: #acacac;
+}
+

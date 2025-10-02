@@ -1,0 +1,6 @@
+to run app
+1. go to the root of the project
+3. run "docker compose up -d --build"
+
+to stop and delete all containers
+run "docker compose down"

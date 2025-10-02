@@ -1,0 +1,21 @@
+.orderTheItemByIDTitle {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #f6f2f2;
+}
+
+@media (max-width: 650px) {
+    .orderTheItemByIDTitle{
+        font-size: 30px;
+        margin-bottom: 0px;
+    }
+}
+@media (max-height: 650px) {
+    .orderTheItemByIDTitle{
+        font-size: 30px;
+        margin-bottom: 0px;
+
+    }
+}

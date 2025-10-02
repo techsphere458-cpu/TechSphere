@@ -1,0 +1,105 @@
+.orderTheItemByIDContentContainer{
+    width: 50%;
+    height: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #111827, #171006);
+}
+@media (max-width: 1875px) {
+    .orderTheItemByIDContentContainer {
+        width: 60%;
+    }
+}
+@media (max-width: 1025px) {
+    .orderTheItemByIDContentContainer {
+        width: 70%;
+    }
+}
+@media (max-width: 920px) {
+    .orderTheItemByIDContentContainer {
+        width: 95%;
+    }
+}
+@media (max-height: 850px) {
+    .orderTheItemByIDContentContainer {
+        height: 90%;
+    }
+}
+
+@media (max-height: 750px) {
+    .orderTheItemByIDContentContainer {
+        height: 95%;
+    }
+}
+
+
+.orderTheItemByIDContentTitle{
+    margin-top: 0px;
+    height: 15%;
+    width: 60%;
+}
+@media(max-height: 620px){
+    .orderTheItemByIDContentTitle{
+        height: 10%;
+    }
+}
+
+
+
+.orderTheItemByIDAboutItemContainer{
+    width: 60%;
+    height: 40%;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+
+
+.orderTheItemByIDContentFormSeparator{
+    position: absolute;
+    background-color: white;
+}
+
+
+
+.orderTheItemByIDFormContentContainer{
+    width: 60%;
+    height: 45%;
+    position: relative;
+}
+
+@media (max-height: 1080px) {
+    .orderTheItemByIDFormContentContainer{
+        height: 50%;
+    }
+}
+
+@media (max-height: 665px) {
+    .orderTheItemByIDFormContentContainer{
+        height: 60%;
+    }
+}
+
+@media (max-width: 750px) {
+    .orderTheItemByIDContentTitle {
+        width: 80%;
+    }
+    .orderTheItemByIDAboutItemContainer {
+        width: 80%;
+    }
+    .orderTheItemByIDFormContentContainer{
+        width: 80%;
+    }
+}
+@media (max-width: 550px) {
+    .orderTheItemByIDContentTitle {
+        width: 98%;
+    }
+    .orderTheItemByIDAboutItemContainer {
+        width: 98%;
+    }
+    .orderTheItemByIDFormContentContainer{
+        width: 98%;
+    }
+}

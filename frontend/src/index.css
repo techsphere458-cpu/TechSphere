@@ -1,0 +1,54 @@
+body{
+ margin: 0;
+}
+
+.backGroundPage {
+    background-color: #F5F6F8;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    min-height: 85vh;
+}
+
+.backGroundBody{
+    width: 60%;
+    height: 100%;
+    overflow-x: hidden;
+    position: relative;
+    scrollbar-width: none;
+}
+.backGroundBody::-webkit-scrollbar {
+    height: 0;
+}
+
+
+.backGroundBodySeparatorLeft{
+    min-height: 100%;
+    width: 1px;
+    z-index: 1000;
+    position: fixed;
+    top: 100px;
+    left: 20%;
+}
+
+.backGroundBodySeparatorRight {
+    min-height: 100%;
+    width: 1px;
+    z-index: 1000;
+    position: fixed;
+    top: 100px;
+    right: 20%;
+
+}
+
+@media (max-width: 1567px) {
+    .backGroundBody{
+        width: 100%;
+    }
+    .backGroundBodySeparatorLeft{
+        display: none;
+    }
+    .backGroundBodySeparatorRight{
+        display: none;
+    }
+}

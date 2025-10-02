@@ -1,0 +1,27 @@
+.OrderTheItemByIDAboutItemText{
+    font-size: 25px;
+    font-weight: 400;
+    color: white;
+}
+
+@media (max-width: 650px ) {
+    .OrderTheItemByIDAboutItemText{
+        font-size: 20px;
+    }
+}
+@media (max-height: 980px ) {
+    .OrderTheItemByIDAboutItemText{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .OrderTheItemByIDAboutItemText{
+        font-size: 15px;
+    }
+}
+@media (max-height: 720px ) {
+    .OrderTheItemByIDAboutItemText{
+        font-size: 15px;
+    }
+}

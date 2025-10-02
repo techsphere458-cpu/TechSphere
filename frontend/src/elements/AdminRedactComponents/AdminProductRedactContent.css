@@ -1,0 +1,24 @@
+.adminProductRedactContentContainer{
+    width: 400px;
+    height: 400px;
+    align-items: center;
+    background-color: white;
+}
+.adminProductRedactContentContainer img{
+    width: 100%;
+    max-width: 350px;
+    height: 220px;
+    object-fit: cover;
+    position: relative;
+    margin-top: 30px;
+}
+.adminProductRedactContentContainer h1{
+    margin-top: 20px;
+}
+
+.adminProductRedactContentContainerProps{
+    width: 400px;
+    height: 380px;
+    background-color: white;
+    margin-top: 40px;
+}

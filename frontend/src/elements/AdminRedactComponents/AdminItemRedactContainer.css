@@ -1,0 +1,45 @@
+.adminItemRedactContainer {
+    background-color: white;
+    width: 350px;
+    height: 400px;
+    position: relative;
+}
+
+.adminItemRedactContainer img {
+    width: 100%;
+    max-width: 350px;
+    height: 220px;
+    object-fit: cover;
+    position: relative;
+    margin-top: -30px;
+
+}
+
+.adminItemRedactContainerModel {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.adminItemRedactContainerPrice {
+    font-size: 17px;
+    font-weight: bold;
+    position: absolute;
+    margin-top: 280px;
+    color: #326632;
+}
+
+.adminItemRedactContainerBadge {
+    position: absolute;
+    top: 250px;
+}
+
+.adminItemRedactContainerProps {
+    background-color: white;
+    width: 500px;
+    margin-top: 20px;
+}
+
+.adminItemRedactContainerImageURLInput {
+    margin-top: 20px;
+}

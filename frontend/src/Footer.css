@@ -1,0 +1,28 @@
+.footerContainer {
+    background-color: #111827;
+    padding: 20px;
+    width: 100%;
+    position: sticky;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footerContainer p{
+    color: #c5c5c5;
+    font-size: 24px;
+}
+
+@media (max-width: 550px) {
+    .footerContainer p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 350px) {
+    .footerContainer p {
+        font-size: 14px;
+    }
+}

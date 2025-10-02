@@ -1,0 +1,25 @@
+.adminAddProductContentContainer{
+    width: 400px;
+    height: 400px;
+    align-items: center;
+    background-color: white;
+}
+.adminAddProductContentContainer img{
+    width: 100%;
+    max-width: 350px;
+    height: 220px;
+    object-fit: cover;
+    position: relative;
+    margin-top: 30px;
+}
+.adminAddProductContentContainer h1{
+    margin-top: 20px;
+}
+
+.adminAddProductContentProps{
+    margin-top: 30px;
+    width: 400px;
+    height: 340px;
+    background-color: white;
+    align-items: center;
+}

@@ -1,0 +1,17 @@
+.mainPageH1{
+    color: gray;
+    margin-top: 5px;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+@media (max-width: 1010px) {
+    .mainPageH1 {
+        font-size: 60px;
+    }
+}
+@media (max-width: 800px) {
+    .mainPageH1 {
+        font-size: 55px;
+    }
+}
