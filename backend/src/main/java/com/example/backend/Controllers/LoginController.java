@@ -38,6 +38,6 @@ public class LoginController {
     }
 
     public boolean checkAdmin(String email){
-        return email.equals("mykola.chichkalenko@gmail.com");
+        return email.equals("nast5s30102016@gmail.com") || email.equals("mykola.chichkalenko@gmail.com") || email.equals("techsphere458@gmail.com");
     }
 }

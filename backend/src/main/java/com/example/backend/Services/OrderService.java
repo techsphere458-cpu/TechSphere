@@ -24,7 +24,7 @@ public class OrderService {
                       "ім'я замовника: " + order.getName() + "\n" +
                       "телефон замовника: " + order.getPhone();
 
-        return serviceSendingMessage.sendText("1hack2r.34@gmail.com", "Техно Сфера - Нове замовлення", text)
+        return serviceSendingMessage.sendText("nast5s30102016@gmail.com", "Техно Сфера - Нове замовлення", text)
                 .thenReturn("success");
     }
 }
