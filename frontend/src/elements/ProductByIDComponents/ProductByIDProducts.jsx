@@ -1,4 +1,4 @@
-import {Badge, Box, Button, Grid, Select} from "@radix-ui/themes";
+import {Badge, Box, Button, Grid, Select, Text} from "@radix-ui/themes";
 import Search from "../../vender components/components/Search.jsx";
 import {useEffect, useState} from "react";
 import axios from "axios";
@@ -92,7 +92,7 @@ export default function ProductByIDProducts({type}) {
                         (isUsedFilter ? filteredProductsByID : productsByID).map((p) => (
                             <div key={p.id} className={"mainPageProductByIDContainer"}>
                                 <img src={p.imageUrl} loading={"lazy"}/>
-                                <p className={"mainPageProductByIDContainerType"}>{p.model}</p>
+                                <Text className={"mainPageProductByIDContainerType"} style={p.model.length > 20 ? {fontSize:"17px"} : {}}>{p.model}</Text>
                                 <p className={"mainPageProductByIDPrize"}>{p.price}грн</p>
 
                                 <Box className={"mainPageProductByIDButtonAndBadgeContainer"}>
@@ -142,7 +142,7 @@ function getMockDataForProductsByID() {
         {
             id: 4,
             type: "Matrix",
-            model: "XGRS",
+            model: "XGRSRERERAFASD",
             price: "100",
             isNew: true,
             imageUrl: "https://m.media-amazon.com/images/I/51EG732BV3L.jpg"
@@ -166,7 +166,7 @@ function getMockDataForProductsByID() {
         {
             id: 7,
             type: "Matrix",
-            model: "ZDFD",
+            model: "ZDFDFDDDDDDDDDDDDDDFG",
             price: "100",
             isNew: true,
             imageUrl: "https://m.media-amazon.com/images/I/51EG732BV3L.jpg"

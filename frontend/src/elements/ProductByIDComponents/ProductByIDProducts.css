@@ -40,6 +40,7 @@
     color: #333;
     margin: 12px 0 0 0;
     text-align: center;
+
 }
 
 .mainPageProductByIDPrize{
@@ -47,6 +48,7 @@
     font-weight: 500;
     color: #536b56;
     margin: 8px 0 0 0;
+    display: inline-block;
 }
 
 .mainPageProductByIDButtonAndBadgeContainer{
@@ -58,7 +60,8 @@
 
 .mainPageProductByIDBadge{
     position: absolute;
-    top: -150%;
+    top: -80%;
+
 }
 
 .mainPageProductByIDContainer button {

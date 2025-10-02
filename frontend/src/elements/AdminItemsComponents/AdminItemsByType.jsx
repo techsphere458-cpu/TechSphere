@@ -98,7 +98,7 @@ export default function AdminItemsByType({type}) {
                             <div key={p.id} className={"mainPageProductByIDContainer"}>
                                 <img src={p.imageUrl} loading={"lazy"}
                                      onClick={() => window.location.href = `/admin/redact/item/${p.id}`}/>
-                                <p className={"mainPageProductByIDContainerType"}>{p.model}</p>
+                                <p className={"mainPageProductByIDContainerType"} style={p.model.length > 20 ? {fontSize:"17px"} : {}}>{p.model}</p>
                                 <p className={"mainPageProductByIDPrize"}>{p.price}грн</p>
 
                                 <Box className={"mainPageProductByIDButtonAndBadgeContainer"}>
@@ -149,7 +149,7 @@ function getMockDataForProductsByID() {
         {
             id: 4,
             type: "Matrix",
-            model: "XGRS",
+            model: "XGRSDSSSSSSSSSSSSFSFSFFSFSFFFS",
             price: "100",
             isNew: true,
             imageUrl: "https://m.media-amazon.com/images/I/51EG732BV3L.jpg"
