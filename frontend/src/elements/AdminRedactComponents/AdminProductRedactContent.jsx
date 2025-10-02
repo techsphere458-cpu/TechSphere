@@ -84,7 +84,7 @@ export default function AdminProductRedactContent({id}) {
             }
         });
 
-        if (imageURL && imageURL.trim().length > 0 && imageURL.trim().length < 255 && title && title.trim().length > 0 && title.trim().length < 25 && !contains) {
+        if (imageURL && imageURL.trim().length > 0 && imageURL.trim().length < 255 && title && title.trim().length > 0 && title.trim().length <= 30 && !contains) {
             setCorrect(true);
         } else {
             setCorrect(false);

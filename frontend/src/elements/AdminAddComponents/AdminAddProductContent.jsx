@@ -60,7 +60,7 @@ export default function AdminAddProductContent() {
     }, [imageURLPrev]);
 
     useEffect(() => {
-        if (imageURL && imageURL.length > 0 && imageURL.length < 255 && title && title.length > 0) {
+        if (imageURL && imageURL.length > 0 && imageURL.length < 255 && title && title.length > 0 && title.length <= 30) {
             const exists = existProducts.some(product => product.title.trim().toLowerCase() === title.trim().toLowerCase());
             setCorrect(!exists);
         } else {

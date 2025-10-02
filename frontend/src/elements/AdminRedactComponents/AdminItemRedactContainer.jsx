@@ -77,7 +77,7 @@ export default function AdminItemRedactContainer() {
     }, [urlInput]);
 
     useEffect(() => {
-        if (newModel && newImageURL && newPrice && newImageURL.length < 255 && newModel.length > 0 && newImageURL.length > 0 && newPrice > 0 && !newPrice.toString().includes('e', ',',)) {
+        if (newModel && newImageURL && newPrice && newImageURL.length < 255 && newModel.length > 0 && newModel.length <= 30 && newImageURL.length > 0 && newPrice > 0 && !newPrice.toString().includes('e', ',',)) {
             setCorrect(true);
         } else {
             setCorrect(false);

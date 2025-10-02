@@ -56,7 +56,7 @@ export default function AdminAddItemContent() {
     }, []);
 
     useEffect(() => {
-        if (model && type && imageURL && price && imageURL.length < 255 && model.length > 0 && type.length > 0 && imageURL.length > 0 && price > 0 && !price.toString().includes('e', ',',)) {
+        if (model && type && imageURL && price && imageURL.length < 255 && model.length > 0 && model.length <= 30 && type.length > 0 && imageURL.length > 0 && price > 0 && !price.toString().includes('e', ',',)) {
             setCorrect(true);
         } else {
             setCorrect(false);
