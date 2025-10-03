@@ -48,7 +48,7 @@
 .mainPageProductByIDContainerType {
     font-size: 25px;
     font-weight: 600;
-    background: linear-gradient(135deg, oklch(0 0 0) 0%, oklch(0.901 0 89.876) 100%);
+    background: linear-gradient(135deg, oklch(0 0 0) 0%, oklch(0 0 0) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
