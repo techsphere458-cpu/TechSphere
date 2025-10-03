@@ -1,45 +1,181 @@
 .adminItemRedactContainer {
-    background-color: white;
+    position: relative;
     width: 350px;
     height: 400px;
-    position: relative;
+    background: linear-gradient(135deg, oklch(0.98 0.01 264) 0%, oklch(0.96 0.015 280) 100%);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid oklch(0.92 0.005 264);
+    overflow: visible;
+}
+
+.adminItemRedactContainer:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07), 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
 .adminItemRedactContainer img {
     width: 100%;
     max-width: 350px;
     height: 220px;
-    object-fit: cover;
-    position: relative;
+    object-fit: contain;
+    border-radius: 12px;
+    background: white;
+    padding: 16px;
     margin-top: -30px;
+    transition: transform 0.3s ease;
+}
 
+.adminItemRedactContainer:hover img {
+    transform: scale(1.02);
 }
 
 .adminItemRedactContainerModel {
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 50px;
+    color: oklch(0.25 0.02 264);
+    line-height: 1.4;
+    text-align: center;
 }
 
 .adminItemRedactContainerPrice {
-    font-size: 17px;
-    font-weight: bold;
+    font-size: 24px;
+    font-weight: 700;
     position: absolute;
     margin-top: 280px;
-    color: #326632;
+    background: linear-gradient(135deg, oklch(0.45 0.15 264) 0%, oklch(0.55 0.2 264) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.adminItemRedactContainerPrice::after {
+    content: " ₴";
+    font-size: 20px;
+    opacity: 0.8;
 }
 
 .adminItemRedactContainerBadge {
     position: absolute;
     top: 250px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: all 0.3s ease;
+}
+
+.adminItemRedactContainerBadge:hover {
+    transform: scale(1.05);
 }
 
 .adminItemRedactContainerProps {
-    background-color: white;
-    width: 500px;
-    margin-top: 20px;
+    width: min(500px, 90vw);
+    background: white;
+    margin-top: 40px;
+    padding: 32px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 12px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid oklch(0.94 0 0);
+    transition: all 0.3s ease;
+}
+
+.adminItemRedactContainerProps:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06), 0 16px 48px rgba(0, 0, 0, 0.1);
+}
+
+.adminItemRedactContainerProps h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: oklch(0.25 0.02 264);
+    margin: 0 0 20px 0;
+    text-align: center;
+    letter-spacing: -0.02em;
 }
 
 .adminItemRedactContainerImageURLInput {
     margin-top: 20px;
+    width: 100%;
+}
+
+.adminItemRedactContainerProps input[type="text"],
+.adminItemRedactContainerProps input[type="number"] {
+    width: 100%;
+    height: 44px;
+    padding: 0 16px;
+    border-radius: 10px;
+    border: 2px solid oklch(0.92 0.005 264);
+    background: oklch(0.99 0 0);
+    font-size: 15px;
+    transition: all 0.2s ease;
+    color: oklch(0.25 0.02 264);
+}
+
+.adminItemRedactContainerProps input[type="text"]:hover,
+.adminItemRedactContainerProps input[type="number"]:hover {
+    border-color: oklch(0.65 0.15 264);
+    background: white;
+}
+
+.adminItemRedactContainerProps input[type="text"]:focus,
+.adminItemRedactContainerProps input[type="number"]:focus {
+    outline: none;
+    border-color: oklch(0.55 0.2 264);
+    box-shadow: 0 0 0 3px oklch(0.55 0.2 264 / 0.1);
+    background: white;
+}
+
+.adminItemRedactContainerProps input::placeholder {
+    color: oklch(0.6 0.01 264);
+}
+
+.adminItemRedactContainerProps button {
+    height: 44px;
+    padding: 0 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.2s ease;
+    letter-spacing: 0.01em;
+}
+
+.adminItemRedactContainerProps button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.adminItemRedactContainerProps button:active {
+    transform: translateY(0);
+}
+
+.adminItemRedactContainerProps .rt-Separator {
+    background: oklch(0.94 0.005 264);
+    opacity: 0.6;
+}
+
+.adminItemRedactContainerProps .rt-Switch {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.adminItemRedactContainerProps .rt-Switch:hover {
+    box-shadow: 0 0 0 4px oklch(0.55 0.2 264 / 0.1);
+}
+
+@media (max-width: 768px) {
+    .adminItemRedactContainer {
+        width: 100%;
+        max-width: 350px;
+        padding: 16px;
+    }
+
+    .adminItemRedactContainer img {
+        height: 180px;
+    }
+
+    .adminItemRedactContainerProps {
+        padding: 24px 20px;
+        margin-top: 24px;
+    }
 }

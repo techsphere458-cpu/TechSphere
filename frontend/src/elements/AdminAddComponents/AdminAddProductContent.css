@@ -1,25 +1,149 @@
-.adminAddProductContentContainer{
-    width: 400px;
-    height: 400px;
-    align-items: center;
-    background-color: white;
+
+
+:root {
+    --admin-primary: oklch(0.55 0.2 264);
+    --admin-primary-hover: oklch(0.5 0.22 264);
+    --admin-text-dark: oklch(0.25 0.02 264);
+    --admin-text-muted: oklch(0.45 0.03 264);
+    --admin-border: oklch(0.9 0.01 264);
+    --admin-bg-gradient: linear-gradient(135deg, oklch(0.98 0.01 264) 0%, oklch(0.96 0.015 280) 100%);
+    --admin-shadow-sm: 0 2px 8px oklch(0.5 0.1 264 / 0.08);
+    --admin-shadow-md: 0 4px 16px oklch(0.5 0.1 264 / 0.12);
+    --admin-shadow-lg: 0 8px 24px oklch(0.5 0.1 264 / 0.15);
 }
-.adminAddProductContentContainer img{
+
+.adminAddProductContentContainer {
+    width: 400px;
+    min-height: 400px;
+    align-items: center;
+    background: white;
+    border-radius: 16px;
+    box-shadow: var(--admin-shadow-md);
+    padding: 24px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--admin-border);
+}
+
+.adminAddProductContentContainer:hover {
+    box-shadow: var(--admin-shadow-lg);
+    transform: translateY(-2px);
+}
+
+.adminAddProductContentContainer img {
     width: 100%;
     max-width: 350px;
     height: 220px;
     object-fit: cover;
     position: relative;
     margin-top: 30px;
-}
-.adminAddProductContentContainer h1{
-    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: var(--admin-shadow-sm);
+    transition: all 0.3s ease;
+    border: 2px solid var(--admin-border);
 }
 
-.adminAddProductContentProps{
+.adminAddProductContentContainer img:hover {
+    box-shadow: var(--admin-shadow-md);
+    transform: scale(1.02);
+}
+
+.adminAddProductContentContainer h1 {
+    margin-top: 20px;
+    background: linear-gradient(135deg, var(--admin-primary) 0%, oklch(0.45 0.25 280) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.adminAddProductContentProps {
     margin-top: 30px;
     width: 400px;
-    height: 340px;
-    background-color: white;
+    min-height: 340px;
+    background: white;
     align-items: center;
+    border-radius: 16px;
+    box-shadow: var(--admin-shadow-md);
+    padding: 24px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--admin-border);
+}
+
+.adminAddProductContentProps:hover {
+    box-shadow: var(--admin-shadow-lg);
+}
+
+.adminAddProductContentProps h1 {
+    color: var(--admin-text-dark);
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+
+.adminAddProductContentProps input[type="text"] {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--admin-border);
+    border-radius: 10px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    background: oklch(0.99 0.005 264);
+    color: var(--admin-text-dark);
+}
+
+.adminAddProductContentProps input[type="text"]:focus {
+    outline: none;
+    border-color: var(--admin-primary);
+    box-shadow: 0 0 0 3px oklch(0.55 0.2 264 / 0.1);
+    background: white;
+}
+
+.adminAddProductContentProps input[type="text"]::placeholder {
+    color: var(--admin-text-muted);
+}
+
+.adminAddProductContentProps button {
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--admin-shadow-sm);
+}
+
+.adminAddProductContentProps button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--admin-shadow-md);
+}
+
+.adminAddProductContentProps button:active {
+    transform: translateY(0);
+}
+
+/* Switch styling */
+.adminAddProductContentProps [role="switch"] {
+    background: var(--admin-border);
+    transition: all 0.3s ease;
+}
+
+.adminAddProductContentProps [role="switch"][data-state="checked"] {
+    background: var(--admin-primary);
+}
+
+/* Separator styling */
+.adminAddProductContentProps [data-orientation="horizontal"] {
+    background: var(--admin-border);
+    height: 1px;
+    opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+    .adminAddProductContentContainer,
+    .adminAddProductContentProps {
+        width: 100%;
+        max-width: 400px;
+    }
 }

@@ -1,5 +1,166 @@
-.adminAddItemContentPropsContainer{
-    width: 400px;
-    background-color: white;
-    margin-top: 30px;
+.adminItemRedactContainer {
+    position: relative;
+    width: 280px;
+    background: linear-gradient(135deg, oklch(0.98 0.01 264) 0%, oklch(0.96 0.015 280) 100%);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid oklch(0.92 0.005 264);
+}
+
+.adminItemRedactContainer:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07), 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.adminItemRedactContainer img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: white;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.adminItemRedactContainerModel {
+    font-size: 18px;
+    font-weight: 600;
+    color: oklch(0.25 0.02 264);
+    margin: 30px 0 4px 0;
+    line-height: 1.4;
+}
+
+.adminItemRedactContainerPrice {
+    font-size: 24px;
+    font-weight: 700;
+    color: oklch(0.45 0.15 264);
+    margin: 165px 0 0 0;
+}
+
+.adminItemRedactContainerPrice::after {
+    content: " ₴";
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+.adminItemRedactContainerBadge {
+    position: absolute;
+    top: 16px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.adminAddItemContentPropsContainer {
+    width: min(480px, 90vw);
+    background: white;
+    margin-top: 40px;
+    padding: 32px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 12px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid oklch(0.94 0 0);
+}
+
+.adminAddItemContentPropsContainer h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: oklch(0.25 0.02 264);
+    margin: 0 0 24px 0;
+    text-align: center;
+    letter-spacing: -0.02em;
+}
+
+.adminAddItemContentPropsContainer .rt-SelectTrigger {
+    width: 100%;
+    height: 44px;
+    border-radius: 10px;
+    border: 2px solid oklch(0.92 0.005 264);
+    background: oklch(0.99 0 0);
+    transition: all 0.2s ease;
+}
+
+.adminAddItemContentPropsContainer .rt-SelectTrigger:hover {
+    border-color: oklch(0.65 0.15 264);
+    background: white;
+}
+
+.adminAddItemContentPropsContainer .rt-SelectTrigger:focus {
+    border-color: oklch(0.55 0.2 264);
+    box-shadow: 0 0 0 3px oklch(0.55 0.2 264 / 0.1);
+}
+
+.adminAddItemContentPropsContainer .rt-Separator {
+    background: oklch(0.94 0.005 264);
+    opacity: 0.6;
+}
+
+.adminAddItemContentPropsContainer .rt-Switch {
+    cursor: pointer;
+}
+
+.adminAddItemContentPropsContainer input[type="text"],
+.adminAddItemContentPropsContainer input[type="number"] {
+    width: 100%;
+    height: 44px;
+    padding: 0 16px;
+    border-radius: 10px;
+    border: 2px solid oklch(0.92 0.005 264);
+    background: oklch(0.99 0 0);
+    font-size: 15px;
+    transition: all 0.2s ease;
+    color: oklch(0.25 0.02 264);
+}
+
+.adminAddItemContentPropsContainer input[type="text"]:hover,
+.adminAddItemContentPropsContainer input[type="number"]:hover {
+    border-color: oklch(0.65 0.15 264);
+    background: white;
+}
+
+.adminAddItemContentPropsContainer input[type="text"]:focus,
+.adminAddItemContentPropsContainer input[type="number"]:focus {
+    outline: none;
+    border-color: oklch(0.55 0.2 264);
+    box-shadow: 0 0 0 3px oklch(0.55 0.2 264 / 0.1);
+    background: white;
+}
+
+.adminAddItemContentPropsContainer input::placeholder {
+    color: oklch(0.6 0.01 264);
+}
+
+.adminAddItemContentPropsContainer button {
+    height: 44px;
+    padding: 0 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.2s ease;
+    letter-spacing: 0.01em;
+}
+
+.adminAddItemContentPropsContainer button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.adminAddItemContentPropsContainer button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .adminAddItemContentPropsContainer {
+        padding: 24px 20px;
+        margin-top: 24px;
+    }
+
+    .adminItemRedactContainer {
+        width: 240px;
+        padding: 20px;
+    }
+
+    .adminItemRedactContainer img {
+        height: 160px;
+    }
 }

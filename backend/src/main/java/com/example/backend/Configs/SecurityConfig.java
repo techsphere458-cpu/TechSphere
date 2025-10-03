@@ -40,7 +40,7 @@ public class SecurityConfig {
                         oAuth2LoginSpec.
                         loginPage("/oauth2/authorization/google")
                                 .authenticationSuccessHandler(new RedirectServerAuthenticationSuccessHandler("/admin"))
-                                .authenticationFailureHandler(new RedirectServerAuthenticationFailureHandler("/error")))
+                                .authenticationFailureHandler(new RedirectServerAuthenticationFailureHandler("/")))
                 .build();
     }
 }

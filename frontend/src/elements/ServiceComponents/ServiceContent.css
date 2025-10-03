@@ -1,58 +1,88 @@
-.serviceContentContainer{
+.serviceContentContainer {
     width: 100%;
     margin-top: 10px;
 }
 
-.serviceItemContainer{
+.serviceItemContainer {
     display: flex;
     flex-direction: row;
     gap: 200px;
+    background: linear-gradient(135deg, oklch(0.98 0.01 264) 0%, oklch(0.96 0.015 280) 100%);
+    border-radius: 16px;
+    padding: 32px;
+    margin: 20px 5%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
 }
-.serviceItemContainer img{
+
+.serviceItemContainer:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+.serviceItemContainer img {
     width: 400px;
     height: 200px;
     margin-top: 60px;
-    border: white;
-    border-radius: 10px;
+    border-radius: 12px;
     margin-right: 5%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-
-.serviceItemTitleContainer{
+.serviceItemTitleContainer {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 10px;
 }
-.serviceItemTitleContainer p{
+
+.serviceItemTitleContainer p {
     font-size: 60px;
-    font-weight: 500;
+    font-weight: 600;
     position: relative;
     top: 50px;
-    color: black;
+    background: linear-gradient(135deg, oklch(0.191 0 89.876) 0%, oklch(0.453 0 89.876) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
 }
 
-
-.serviceItemUnderTitleContainer{
+.serviceItemUnderTitleContainer {
     width: 100%;
     margin-top: 10px;
 }
-.serviceItemUnderTitleContainer p{
+
+.serviceItemUnderTitleContainer p {
     font-size: 30px;
-    font-weight: 500;
-    color: black;
-    margin-left: 5%;
+    font-weight: 600;
+    color: oklch(0.35 0.05 264);
+    margin-bottom: 16px;
 }
 
-
-.serviceItemContentContainer{
+.serviceItemContentContainer {
     width: 100%;
-    margin-left: 5%;
     font-size: 20px;
+    color: oklch(0.25 0.02 264);
+    line-height: 1.8;
 }
 
+.serviceItemContentContainer p {
+    margin: 12px 0;
+    transition: all 0.2s ease;
+}
 
-.serviceHiddenBoxForDesign{
+.serviceItemContentContainer p:hover {
+    color: oklch(0.45 0.15 264);
+    transform: translateX(4px);
+}
+
+.serviceItemContentContainer strong {
+    color: oklch(0.55 0.2 264);
+    font-weight: 600;
+}
+
+.serviceHiddenBoxForDesign {
     position: absolute;
     top: 1400px;
     background: transparent;
@@ -61,92 +91,105 @@
 }
 
 @media (max-width: 1150px) {
-    .serviceItemTitleContainer p{
+    .serviceItemTitleContainer p {
         font-size: 50px;
     }
-    .serviceItemTitleContainer{
+    .serviceItemTitleContainer {
         margin-top: -10px;
     }
-    .serviceHiddenBoxForDesign{
+    .serviceHiddenBoxForDesign {
         top: 1300px;
     }
 }
-@media (max-width: 980px){
-    .serviceItemUnderTitleContainer{
+
+@media (max-width: 980px) {
+    .serviceItemContainer {
+        padding: 24px;
+        margin: 15px 3%;
+    }
+    .serviceItemUnderTitleContainer {
         margin-top: 20px;
     }
-    .serviceItemUnderTitleContainer p{
-        font-size: 20px;
+    .serviceItemUnderTitleContainer p {
+        font-size: 25px;
     }
-    .serviceItemTitleContainer{
+    .serviceItemTitleContainer {
         margin-top: -30px;
     }
-    .serviceItemTitleContainer p{
+    .serviceItemTitleContainer p {
         font-size: 40px;
         margin-bottom: 60px;
     }
-    .serviceItemUnderTitleContainer p{
-        font-size: 25px;
-    }
-    .serviceItemContentContainer{
+    .serviceItemContentContainer {
         font-size: 18px;
     }
-
 }
+
 @media (max-width: 730px) {
-    .serviceItemTitleContainer{
+    .serviceItemContainer {
+        padding: 20px;
+        margin: 10px 2%;
+    }
+    .serviceItemTitleContainer {
         margin-top: -50px;
     }
-    .serviceItemTitleContainer p{
+    .serviceItemTitleContainer p {
         font-size: 30px;
     }
-    .serviceItemUnderTitleContainer p{
+    .serviceItemUnderTitleContainer p {
         font-size: 18px;
     }
     .serviceItemContentContainer {
         font-size: 16px;
     }
-    .serviceHiddenBoxForDesign{
+    .serviceHiddenBoxForDesign {
         top: 1000px;
     }
 }
+
 @media (max-width: 610px) {
-    .serviceItemTitleContainer{
+    .serviceItemContainer {
+        padding: 16px;
+    }
+    .serviceItemTitleContainer {
         margin-top: -80px;
     }
-    .serviceItemTitleContainer p{
+    .serviceItemTitleContainer p {
         font-size: 25px;
         margin-bottom: 50px;
     }
-    .serviceItemUnderTitleContainer p{
+    .serviceItemUnderTitleContainer p {
         font-size: 16px;
     }
-    .serviceItemContentContainer{
+    .serviceItemContentContainer {
         font-size: 14px;
     }
 }
 
 @media (max-width: 450px) {
-    .serviceItemTitleContainer{
+    .serviceItemTitleContainer {
         margin-top: -100px;
     }
-    .serviceItemTitleContainer p{
+    .serviceItemTitleContainer p {
         font-size: 20px;
         top: 60px;
     }
 }
+
 @media (max-width: 370px) {
-    .serviceItemTitleContainer p{
+    .serviceItemContainer {
+        padding: 12px;
+    }
+    .serviceItemTitleContainer p {
         font-size: 18px;
     }
-    .serviceItemUnderTitleContainer p{
+    .serviceItemUnderTitleContainer p {
         font-size: 14px;
     }
-    .serviceItemContentContainer{
+    .serviceItemContentContainer {
         font-size: 12px;
     }
-    .serviceHiddenBoxForDesign{
+    .serviceHiddenBoxForDesign {
         top: 800px;
     }
-    
 }

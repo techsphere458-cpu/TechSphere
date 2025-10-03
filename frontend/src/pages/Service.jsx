@@ -9,7 +9,6 @@ export default function Service(){
         <DefaultComponent pageName={"service"}>
             <ServiceTitle/>
 
-            <Separator orientation={"horizontal"} size={"4"} className={"titleSeparator"}/>
 
             <ServiceContent/>
         </DefaultComponent>

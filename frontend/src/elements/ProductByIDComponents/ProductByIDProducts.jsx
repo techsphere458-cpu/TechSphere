@@ -1,75 +1,83 @@
-import {Badge, Box, Button, Grid, Select, Text} from "@radix-ui/themes";
-import Search from "../../vender components/components/Search.jsx";
-import {useEffect, useState} from "react";
-import axios from "axios";
+"use client"
+
+import { Badge, Box, Button, Grid, Select, Text } from "@radix-ui/themes"
+import Search from "../../vender components/components/Search.jsx"
+import { useEffect, useState } from "react"
+import axios from "axios"
 import "./ProductByIDProducts.css"
 
-export default function ProductByIDProducts({type}) {
-    const baseUrl = import.meta.env.VITE_BASE_URL;
+export default function ProductByIDProducts({ type }) {
+    const baseUrl = import.meta.env.VITE_BASE_URL
 
-    const [isUsedFilter, setIsUsedFilter] = useState(false);
+    const [isUsedFilter, setIsUsedFilter] = useState(false)
 
-    const [productsByID, setProductsByID] = useState([]);
-    const [filteredProductsByID, setFilteredProductsByID] = useState(productsByID);
+    const [productsByID, setProductsByID] = useState([])
+    const [filteredProductsByID, setFilteredProductsByID] = useState(productsByID)
 
-    const [searchTarget, setSearchTarget] = useState("");
+    const [searchTarget, setSearchTarget] = useState("")
 
-    const [productCondition, setProductCondition] = useState("all");
-    const [needToBeNew, setNeedToBeNew] = useState(null);
+    const [productCondition, setProductCondition] = useState("all")
+    const [needToBeNew, setNeedToBeNew] = useState(null)
 
     useEffect(() => {
-        if(baseUrl ==="/api" && type.length > 0){
-            axios.get(`${baseUrl}/items/${type}`).then(res => setProductsByID(res.data));
-        }else {
-            setProductsByID(getMockDataForProductsByID());
+        if (baseUrl === "/api" && type.length > 0) {
+            axios.get(`${baseUrl}/items/${type}`).then((res) => setProductsByID(res.data))
+        } else {
+            setProductsByID(getMockDataForProductsByID())
         }
-
-    }, [type]);
+    }, [type])
 
     //condition filter
     useEffect(() => {
         switch (productCondition) {
             case "all":
-                setNeedToBeNew(null);
-                break;
+                setNeedToBeNew(null)
+                break
             case "new":
-                setNeedToBeNew(false);
-                break;
+                setNeedToBeNew(false)
+                break
             case "used":
-                setNeedToBeNew(true);
-                break;
+                setNeedToBeNew(true)
+                break
         }
-
-    }, [productCondition]);
+    }, [productCondition])
 
     //filters
     useEffect(() => {
         if (searchTarget.trim().length > 0 && needToBeNew === null) {
-            setIsUsedFilter(true);
-            setFilteredProductsByID(productsByID.filter(p => p.model.toLowerCase().trim().includes(searchTarget.toLowerCase().trim())));
+            setIsUsedFilter(true)
+            setFilteredProductsByID(
+                productsByID.filter((p) => p.model.toLowerCase().trim().includes(searchTarget.toLowerCase().trim())),
+            )
         } else if (searchTarget.trim().length > 0 && needToBeNew !== null) {
-            setIsUsedFilter(true);
-            setFilteredProductsByID(productsByID.filter(p => p.model.toLowerCase().trim().includes(searchTarget.toLowerCase().trim()) && p.isNew !== needToBeNew));
+            setIsUsedFilter(true)
+            setFilteredProductsByID(
+                productsByID.filter(
+                    (p) => p.model.toLowerCase().trim().includes(searchTarget.toLowerCase().trim()) && p.isNew !== needToBeNew,
+                ),
+            )
         } else if (searchTarget.trim().length === 0 && needToBeNew !== null) {
-            setIsUsedFilter(true);
-            setFilteredProductsByID(productsByID.filter(p => p.isNew !== needToBeNew));
+            setIsUsedFilter(true)
+            setFilteredProductsByID(productsByID.filter((p) => p.isNew !== needToBeNew))
         } else {
-            setIsUsedFilter(false);
-            setFilteredProductsByID([]);
-            setNeedToBeNew(null);
+            setIsUsedFilter(false)
+            setFilteredProductsByID([])
+            setNeedToBeNew(null)
         }
-    }, [searchTarget, needToBeNew]);
+    }, [searchTarget, needToBeNew])
 
     return (
         <>
             <Box className={"mainPageProductByIDSearchContainer"}>
-                <Search setSearchTarget={setSearchTarget} searchValue={searchTarget}/>
+                <Search setSearchTarget={setSearchTarget} searchValue={searchTarget} />
 
                 <Select.Root defaultValue="all" onValueChange={(value) => setProductCondition(value)}>
-                    <Select.Trigger variant="ghost" radius="large"
-                                    style={{color: "gray", position: "absolute", left: "5%", marginTop: "5px"}}/>
+                    <Select.Trigger
+                        variant="ghost"
+                        radius="large"
+                        style={{ color: "gray", position: "absolute", left: "5%", marginTop: "5px" }}
+                    />
                     <Select.Content color="gray">
-
                         <Select.Item value="all">Всі</Select.Item>
                         <Select.Item value={"new"}>Нові</Select.Item>
                         <Select.Item value={"used"}>Б/У</Select.Item>
@@ -78,58 +86,65 @@ export default function ProductByIDProducts({type}) {
             </Box>
 
             <Grid
-                columns={{initial: "1", sm: "2", md: "3", lg: "4"}}
+                columns={{ initial: "1", sm: "2", md: "3", lg: "4" }}
                 gap="4"
                 width="100%"
-                style={{marginTop: "80px",marginRight:"5px"}}
+                style={{ marginTop: "80px", marginRight: "5px" }}
             >
-                {
-                    (isUsedFilter ? filteredProductsByID : productsByID).length === 0 ? (
-                        <div className={"mainPageProductByIDNotFoundContainer"}>
-                            <p>Нічого не знайдено</p>
+                {(isUsedFilter ? filteredProductsByID : productsByID).length === 0 ? (
+                    <div className={"mainPageProductByIDNotFoundContainer"}>
+                        <p>Нічого не знайдено</p>
+                    </div>
+                ) : (
+                    (isUsedFilter ? filteredProductsByID : productsByID).map((p) => (
+                        <div key={p.id} className={"mainPageProductByIDContainer"}>
+                            <img src={p.imageUrl || "/placeholder.svg"} loading={"lazy"} />
+                            <Text
+                                className={"mainPageProductByIDContainerType"}
+                                style={p.model.length > 20 ? { fontSize: "17px" } : {}}
+                            >
+                                {p.model}
+                            </Text>
+                            <p className={"mainPageProductByIDPrize"}>{p.price}грн</p>
+
+                            <Box className={"mainPageProductByIDButtonAndBadgeContainer"}>
+                                <Button onClick={() => (window.location.href = `/order/item/${p.id}`)}>Замовити</Button>
+                                <Badge
+                                    className={"mainPageProductByIDBadge"}
+                                    variant="solid"
+                                    radius="full"
+                                    color={p.isNew ? "indigo" : "gray"}
+                                    size={"3"}
+                                    style={p.isNew ? { left: "80%" } : { left: "86%" }}
+                                >
+                                    {p.isNew ? "Новий" : "Б/У"}
+                                </Badge>
+                            </Box>
                         </div>
-                    ) : (
-                        (isUsedFilter ? filteredProductsByID : productsByID).map((p) => (
-                            <div key={p.id} className={"mainPageProductByIDContainer"}>
-                                <img src={p.imageUrl} loading={"lazy"}/>
-                                <Text className={"mainPageProductByIDContainerType"} style={p.model.length > 20 ? {fontSize:"17px"} : {}}>{p.model}</Text>
-                                <p className={"mainPageProductByIDPrize"}>{p.price}грн</p>
-
-                                <Box className={"mainPageProductByIDButtonAndBadgeContainer"}>
-                                    <Button onClick={() => window.location.href=`/order/item/${p.id}`}>Замовити</Button>
-                                    <Badge className={"mainPageProductByIDBadge"} variant="solid" radius="full"
-                                           color={p.isNew ? "indigo" : "gray"} size={"3"}
-                                           style={p.isNew ? {left: "80%"} : {left: "86%"}}>
-                                        {p.isNew ? "Новий" : "Б/У"}
-                                    </Badge>
-                                </Box>
-                            </div>
-                        ))
-                    )
-                }
-
+                    ))
+                )}
             </Grid>
         </>
-    );
+    )
 }
 
-
 function getMockDataForProductsByID() {
-    return [{
-        id: 1,
-        type: "Matrix",
-        model: "XWRRTY",
-        price: "100",
-        isNew: false,
-        imageUrl: "https://m.media-amazon.com/images/I/51EG732BV3L.jpg"
-    },
+    return [
+        {
+            id: 1,
+            type: "Matrix",
+            model: "XWRRTY",
+            price: "100",
+            isNew: false,
+            imageUrl: "https://m.media-amazon.com/images/I/51EG732BV3L.jpg",
+        },
         {
             id: 2,
             type: "Matrix",
             model: "SGRDS",
             price: "100",
             isNew: true,
-            imageUrl: "https://m.media-amazon.com/images/I/51EG732BV3L.jpg"
+            imageUrl: "https://m.media-amazon.com/images/I/51EG732BV3L.jpg",
         },
         {
             id: 3,
@@ -137,7 +152,7 @@ function getMockDataForProductsByID() {
             model: "XGEFD",
             price: "100",
             isNew: true,
-            imageUrl: "https://m.media-amazon.com/images/I/51EG732BV3L.jpg"
+            imageUrl: "https://m.media-amazon.com/images/I/51EG732BV3L.jpg",
         },
         {
             id: 4,
@@ -145,7 +160,7 @@ function getMockDataForProductsByID() {
             model: "XGRSRERERAFASD",
             price: "100",
             isNew: true,
-            imageUrl: "https://m.media-amazon.com/images/I/51EG732BV3L.jpg"
+            imageUrl: "https://m.media-amazon.com/images/I/51EG732BV3L.jpg",
         },
         {
             id: 5,
@@ -153,7 +168,7 @@ function getMockDataForProductsByID() {
             model: "XGRSFFS",
             price: "100",
             isNew: true,
-            imageUrl: "https://m.media-amazon.com/images/I/51EG732BV3L.jpg"
+            imageUrl: "https://m.media-amazon.com/images/I/51EG732BV3L.jpg",
         },
         {
             id: 6,
@@ -161,7 +176,7 @@ function getMockDataForProductsByID() {
             model: "XFSDS",
             price: "100",
             isNew: true,
-            imageUrl: "https://m.media-amazon.com/images/I/51EG732BV3L.jpg"
+            imageUrl: "https://m.media-amazon.com/images/I/51EG732BV3L.jpg",
         },
         {
             id: 7,
@@ -169,7 +184,7 @@ function getMockDataForProductsByID() {
             model: "ZDFDFDDDDDDDDDDDDDDFG",
             price: "100",
             isNew: true,
-            imageUrl: "https://m.media-amazon.com/images/I/51EG732BV3L.jpg"
+            imageUrl: "https://m.media-amazon.com/images/I/51EG732BV3L.jpg",
         },
         {
             id: 8,
@@ -177,7 +192,7 @@ function getMockDataForProductsByID() {
             model: "GDFDAS",
             price: "100",
             isNew: true,
-            imageUrl: "https://m.media-amazon.com/images/I/51EG732BV3L.jpg"
+            imageUrl: "https://m.media-amazon.com/images/I/51EG732BV3L.jpg",
         },
         {
             id: 9,
@@ -185,6 +200,7 @@ function getMockDataForProductsByID() {
             model: "FDA",
             price: "100",
             isNew: true,
-            imageUrl: "https://m.media-amazon.com/images/I/51EG732BV3L.jpg"
-        }];
+            imageUrl: "https://m.media-amazon.com/images/I/51EG732BV3L.jpg",
+        },
+    ]
 }

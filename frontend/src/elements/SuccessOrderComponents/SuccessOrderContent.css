@@ -1,21 +1,73 @@
-.successOrderContentTitle{
+/* Added gradient text styling for title */
+.successOrderContentTitle {
     font-size: 40px;
     font-weight: bold;
     margin-top: 400px;
+    background: linear-gradient(135deg, oklch(0.548 0.112 260.811) 0%, oklch(0.491 0.196 260.779) 50%, oklch(0.516 0.125 244.557) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
 }
-.successOrderContentButton{
+
+/* Added success icon with gradient and animation */
+.successOrderIcon {
+    font-size: 80px;
+    font-weight: bold;
+    color: oklch(0.7 0.25 280);
+    background: linear-gradient(135deg, oklch(0.7 0.25 280) 0%, oklch(0.65 0.25 260) 50%, oklch(0.6 0.25 240) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: successPulse 2s ease-in-out infinite;
+    text-align: center;
+    cursor: pointer;
+}
+
+@keyframes successPulse {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* Updated button with gradient background and hover effects */
+.successOrderContentButton {
     width: 150px;
     height: 40px;
     font-size: 18px;
     margin-top: 20px;
-    background-color: #0e0d0d;
+    background: linear-gradient(135deg, oklch(0.7 0.25 280) 0%, oklch(0.65 0.25 260) 50%, oklch(0.6 0.25 240) 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
     cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+    transition: all 0.3s ease;
+}
+
+.successOrderContentButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5);
+    background: linear-gradient(135deg, oklch(0.75 0.25 280) 0%, oklch(0.7 0.25 260) 50%, oklch(0.65 0.25 240) 100%);
+}
+
+.successOrderContentButton:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(139, 92, 246, 0.4);
 }
 
 @media (max-width: 1300px) {
-    .successOrderContentTitle{
-        font-size: 30px;}
-    .successOrderContentButton{
+    .successOrderContentTitle {
+        font-size: 30px;
+    }
+    .successOrderContentButton {
         width: 120px;
         height: 35px;
         font-size: 16px;
@@ -24,10 +76,13 @@
 }
 
 @media (max-width: 900px) {
-    .successOrderContentTitle{
+    .successOrderContentTitle {
         font-size: 20px;
     }
-    .successOrderContentButton{
+    .successOrderIcon {
+        font-size: 50px;
+    }
+    .successOrderContentButton {
         width: 100px;
         height: 30px;
         font-size: 13px;
@@ -38,32 +93,44 @@
     .successOrderContentTitle {
         font-size: 15px;
     }
-
+    .successOrderIcon {
+        font-size: 40px;
+    }
     .successOrderContentButton {
         width: 80px;
         height: 25px;
-        font-size: 8px;
+        font-size: 10px;
     }
 }
 
 @media (max-width: 470px) {
-    .successOrderContentTitle{
+    .successOrderContentTitle {
         font-size: 13px;
     }
-    .successOrderContentButton{
-        width: 60px;
-        height: 20px;
-        font-size: 5px;
+    .successOrderIcon {
+        font-size: 35px;
+    }
+    .successOrderContentButton {
+        width: 70px;
+        height: 22px;
+        font-size: 9px;
     }
 }
 
 @media (max-height: 860px) {
-    .successOrderContentTitle{
+    .successOrderContentTitle {
         margin-top: 200px;
     }
+    .successOrderIcon {
+        margin-top: 150px;
+    }
 }
+
 @media (max-height: 500px) {
-    .successOrderContentTitle{
+    .successOrderContentTitle {
         margin-top: 100px;
+    }
+    .successOrderIcon {
+        margin-top: 50px;
     }
 }

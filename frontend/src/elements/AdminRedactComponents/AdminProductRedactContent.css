@@ -1,24 +1,124 @@
-.adminProductRedactContentContainer{
+/* Застосування ідентичного дизайну з admin-add-item-content */
+
+.adminProductRedactContentContainer {
     width: 400px;
-    height: 400px;
+    min-height: 400px;
     align-items: center;
-    background-color: white;
+    background: linear-gradient(135deg, oklch(0.98 0.01 264) 0%, oklch(0.96 0.015 280) 100%);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    transition: all 0.3s ease;
 }
-.adminProductRedactContentContainer img{
+
+.adminProductRedactContentContainer:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+.adminProductRedactContentContainer img {
     width: 100%;
     max-width: 350px;
     height: 220px;
     object-fit: cover;
     position: relative;
     margin-top: 30px;
-}
-.adminProductRedactContentContainer h1{
-    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
-.adminProductRedactContentContainerProps{
+.adminProductRedactContentContainer img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.adminProductRedactContentContainer h1 {
+    margin-top: 20px;
+    background: linear-gradient(135deg, oklch(0.55 0.2 264) 0%, oklch(0.45 0.18 280) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.adminProductRedactContentContainerProps {
     width: 400px;
-    height: 380px;
-    background-color: white;
+    min-height: 380px;
+    background: white;
     margin-top: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    transition: all 0.3s ease;
+}
+
+.adminProductRedactContentContainerProps:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.adminProductRedactContentContainerProps h1 {
+    color: oklch(0.25 0.02 264);
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+}
+
+/* Стилізація кнопок та інпутів */
+.adminProductRedactContentContainerProps input {
+    border: 2px solid oklch(0.9 0.01 264);
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    background: oklch(0.99 0.005 264);
+}
+
+.adminProductRedactContentContainerProps input:focus {
+    outline: none;
+    border-color: oklch(0.55 0.2 264);
+    box-shadow: 0 0 0 3px oklch(0.55 0.2 264 / 0.1);
+}
+
+.adminProductRedactContentContainerProps input:hover {
+    border-color: oklch(0.7 0.1 264);
+}
+
+/* Стилізація перемикача */
+.adminProductRedactContentContainerProps button[role="switch"] {
+    background: oklch(0.55 0.2 264);
+    transition: all 0.3s ease;
+}
+
+.adminProductRedactContentContainerProps button[role="switch"]:hover {
+    background: oklch(0.45 0.18 280);
+    transform: scale(1.05);
+}
+
+/* Стилізація кнопок дій */
+button {
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+    .adminProductRedactContentContainer,
+    .adminProductRedactContentContainerProps {
+        width: 100%;
+        max-width: 400px;
+    }
 }
